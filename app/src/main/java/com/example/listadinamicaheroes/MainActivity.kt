@@ -1,3 +1,6 @@
+//JUAN CAMILO GONZALEZ BERRIO 1735277-2711
+//JUAN CAMILO GONZALEZ BERRIO 1735277-2711
+
 package com.example.listadinamicaheroes
 
 import android.content.Context
@@ -39,11 +42,14 @@ class MainActivity : AppCompatActivity(), OnClicListener{
                         putString(getString(R.string.spUserName),userName)
                             .apply()
                     }
+                    Toast.makeText(this,"Registro correcto!",Toast.LENGTH_SHORT).show()
+                    //JUAN CAMILO GONZALEZ BERRIO 1735277-2711
 
                 }).show()
         }else{
             val userName = preferences.getString(getString(R.string.spUserName),getString(R.string.userDefault))
             Toast.makeText(this,"Bienvenido $userName",Toast.LENGTH_SHORT).show()
+
         }
 
         heroeAdapter = HeroeAdapter(getHeroes(),this)
